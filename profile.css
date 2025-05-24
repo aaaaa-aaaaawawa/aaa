@@ -1,0 +1,480 @@
+
+@charset"utf-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%; 
+    overflow-x: hidden;
+}
+
+/* body はこれだけでOK */
+body {
+    font-family: "メイリオ", sans-serif;
+}
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+     background-image: linear-gradient(to right, #a1c4fd, #dff3fd); 
+}
+header {
+    width: 100%;
+    padding: 0;
+    border-bottom: 5px solid #2c4754;
+    background-color: #59717d;
+    position: relative;
+    z-index: 10;
+}
+h1{
+    color: #e3dfd6;
+    text-align: center;
+    text-shadow: 0px 3px 5px#9ca9ae;
+    font-size: 40px;
+    margin: auto;
+}
+.index, .Biggest { 
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    min-height: 600px; 
+    background-color: #ffffff;
+    border-radius: 80px;
+    box-shadow: 4px 4px#3d4447;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 5;
+    flex-grow: 1;
+}
+
+
+h2{
+    font-size: 30px;
+    padding: auto 10px ;
+    color: #a1c4fd;
+    border: solid 2px #a1c4fd;
+    border-left: none;
+    border-right: none;
+    margin-top: 50px;
+}
+.index{
+  margin-left: auto;
+  margin-right: auto;
+  width: 570px;
+  padding: 20px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 80px;
+  box-shadow: 4px 4px#3d4447;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+    z-index: 5;
+    flex-grow: 1;
+}
+
+.Biggest{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: left;
+  width: 570px;
+  padding: 20px;
+  height: 880px;
+  background-color: #ffffff;
+  border-radius: 80px;
+  box-shadow: 4px 4px#3d4447;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#profile ul li,#personality ul li{
+  font-size: 20px;
+  text-align: left;
+  margin: 20px;
+  margin-top: 40px;
+  color: #3d4447;
+}
+
+.hobby-box {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+  width: 570px;
+  padding: 20px;
+  height: 1950px;
+  min-height: auto;
+  background-color: #ffffff;
+  border-radius: 80px;
+  box-shadow: 4px 4px#3d4447;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+    z-index: 5;
+    flex-grow: 1;
+}
+.hobby-box h3{
+  width: 165px;
+  text-align: left;
+  padding: 10px;
+  color: #3d4447;
+  margin-top: 15px;
+  border-bottom: 2px solid;
+}
+#hobby h4{
+  margin-bottom: 30px;
+}
+#hobby img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50px;
+  text-align: right;
+  margin-top: 40px;
+}
+
+#hobby span{
+  color: #4a7991;
+  font-size: 20px;
+}
+.GRAVITYDAZE p, .golden p {
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+table {
+  margin: auto;
+  margin-top: 0px;
+}
+td {
+  text-align: center;
+  padding: 50px 10px;
+}
+#main {
+  border-radius: 4px;
+  display: inline-block;
+  height: 50px;
+  text-decoration: none;
+  width: 150px; 
+  background-color: #c3b37ec9;
+}
+
+.row {
+  margin-left: 50px;
+}
+
+span {
+  color: #e3dfd6;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.button {
+  background: #7caac1;
+  border-radius: 4px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  transition: all 0.6s ease;
+  box-shadow: 5px 5px #4a7991;
+}
+
+.current{
+background-color: #7caac1;
+border-radius: 4px;
+opacity: 0.7;
+transform: translate(5px,5px);
+-webkit-transform: translate(5px,5px);
+box-shadow: none;
+}
+
+.current:hover{
+    cursor: pointer;
+}
+
+.text {
+  transition: all 0.6s ease;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:hover .button {
+  opacity: 0.7; 
+}
+a:hover #translate {
+  transform: translate(5px, 5px);
+  -webkit-transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+.left a img{
+    width: 150px;
+    height:175px;
+    border-radius: 50px;
+    transition: 0.5s all;
+}
+.right a img{
+    width: 150px;
+    height:175px;
+    border-radius: 50px;
+    transition: 0.5s all;
+}
+
+.left a img:hover, .right a img:hover { 
+    opacity: 0.7;
+    transform: perspective(100px) translateZ(3px);
+}
+
+ .left a img{
+  float: left;
+  margin-top: 30px;
+  margin-left: 20;
+  padding: 10.8px;
+  width: calc(120%/3.5999);
+  text-align: center;
+}
+
+#MyPets li img, #UPA li img {
+  width: 176px;
+  height: 176px;
+  border-radius: 40px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 20;
+  padding: 10.8px;
+  text-align: center;
+}
+#UPA li img{
+  margin-top: 5px;
+}
+
+ #first p{
+  color: #3d4447;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: 200px;
+  line-height: 60px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 50px;
+}
+#MyPets h3{
+  width: 165px;
+  font-size: 30px;
+  padding: 10px;
+  color: #7caac1;
+}
+#UPA h3{
+  width: 259.99px;
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 10px;
+  color: #7caac1;
+}
+#MyPets p, #UPA p { 
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #3d4447;
+    line-height: 40px;
+}
+#contact img{
+  width: 70px;
+  transition: 0.5s all;
+}
+#contact a img:hover{
+  transform: perspective(100px) translateZ(8px)
+}
+#contact h2{
+  margin-top: 270px;
+}
+footer{
+    color: #e3dfd6;
+    overflow: hidden; 
+    background-color: #466575; 
+    padding: 0; 
+    text-align: center;
+    position: relative;
+    width: 100%; 
+    z-index: 100; 
+}
+@media (max-width: 768px) {
+
+  nav{
+    width: 100%;
+    text-align: center;
+  }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%; 
+    }
+    nav table{
+      width: 100%;
+      margin: 0 auto;
+    }
+    nav td{
+      display: inline-block;
+      width: 46%;
+      padding: 5px;
+      box-sizing: border-box;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    #main { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        height: 50px;
+        text-decoration: none;
+        background-color: #c3b37ec9;
+        flex: 1 1 45%; 
+                       /* flex-grow: 1, flex-shrink: 1, flex-basis: 45% の省略形 */
+                       /* 45% にすることで、2つ並べた時に間に隙間ができるようにするよ */
+        margin: 5px; /* ボタン同士の間に余白を作るよ */
+        box-sizing: border-box; /* paddingやborderを含めて幅を計算するよ */
+    }
+       .button, .current {
+        display: flex; /* Flexboxで中央寄せ */
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+        width: 100%;
+        border-radius: 4px;
+        transition: all 0.6s ease;
+        box-shadow: 5px 5px #4a7991;
+    }
+    .current {
+        background-color: #7caac1;
+        opacity: 0.7;
+        transform: translate(5px,5px);
+        -webkit-transform: translate(5px,5px);
+        box-shadow: none;
+    }
+
+    span {
+        line-height: normal; 
+    }
+
+    .index, .Biggest{
+        width: 90%;
+        margin-top: 30px;
+        padding: 15px;
+        border-radius: 40px;
+        min-height: auto; 
+        height: auto; 
+        box-shadow: 2px 2px #3d4447;
+    }
+    #profile ul li{
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+    #personality ul li{
+      font-size: 15.75px;
+      margin-bottom: 50px;
+    }
+    .hobby-box{
+        width: 90%;
+        margin-top: 30px;
+        padding: 15px;
+        border-radius: 40px;
+        min-height: auto; 
+        height: 1760px; 
+        box-shadow: 2px 2px #3d4447;
+    }
+    #hobby p{
+      font-size: 15px;
+      line-height: 35px;
+      text-align: left;
+    }
+    .GRAVITYDAZE p{
+      margin-left: 45px;
+    }
+    h2 {
+        font-size: 24px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    #first p {
+        width: 90%;
+        font-size: 14.2px;
+        line-height: 30px;
+        margin-top: 30px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+
+    .left a img, .right a img {
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+        padding: 0;
+        width: 170px;
+        height: 170px;
+    }
+
+    #MyPets li img, #UPA li img {
+        height: 102.5px;
+        width: 102.5px;
+    }
+    #MyPets h3{
+       width: 90%;
+      text-align: center;
+      margin-top: 280px;
+      padding: 10px;
+      color: #7caac1;
+    }
+#MyPets p, #UPA p { 
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3d4447;
+    line-height: 40px;
+}
+  #UPA h3{
+    width: 259.99px;
+  text-align: left;
+  font-size: 30px;
+  padding: 10px;
+  color: #7caac1;
+  }
+
+    #contact h2 {
+        margin-top: 50px;
+    }
+    #contact img {
+        width: 50px;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
